@@ -1,3 +1,25 @@
+
+
+######### Necessario organizar esta primeira secao, sao informacoes aleatorias adquiridas.
+
+GitFlow
+git branch -a (visualiza tudo)
+git status (visualiza modificações)
+git add - leva os arquivos para uma area staged
+git commit -a (add todos os arquivos modificados)
+git commit -m "Mensagem"
+git log -1 (verifica o ultimo log)
+
+git checkout -b nomeBranch
+
+Não é possível trocar de branch sem antes terminar o que está se fazendo.
+
+
+git diff <nome arquivo> (verifica alterações)
+git push (leva o diretorio local para diretorio da nuvem)
+git pull (diretorio da nuvem para local)
+
+
 ---
 Ciclo de vida - Status de arquivos no Git
 
