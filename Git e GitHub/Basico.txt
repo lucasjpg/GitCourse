@@ -57,6 +57,13 @@ O duplo asterisco busca em toda a pasta main.
 Para ignorar arquivos com extensão específica, deve ser ser inserido no seguinte modelo: *.txt
 Todos os arquivos .txt seriam ignorados
 
+Para remover da monitoração arquivos rastreados (Tracked), é necessário:
+git rm -r --cached Nome\ da\ Pasta/ - Para pastas necessário -recursive
+git rm --cached nome_arquivo.* - Para arquivos
+
+Para adicionar mais arquivos ou pastas em .gitignore:
+echo 'another_file_to_ignore' >> .gitignore
+
 ---
 Operações básicas
 
