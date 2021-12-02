@@ -1,0 +1,1 @@
+# Este arquivo não está sendo monitorado por este projeto Git devido estar em uma pasta não monitorada.

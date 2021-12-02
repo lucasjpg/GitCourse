@@ -1,0 +1,73 @@
+---
+Ciclo de vida - Status de arquivos no Git
+
+Untracked - Não rastreado
+Não foi adicionado ao monitoramento do Git
+Os arquivos iniciam com o status Untracked
+
+Tracked - Rastreado
+Quando o arquivo é adicionado ao monitoramento do Git
+São conhecidos como "New File", ou seja, arquivo novo
+O Git está controlando as mudanças no arquivo e isso passa a fazer parte do projeto
+
+Modified - Modificado
+O arquivo foi modificado, o arquivo está sendo rastreado
+Aqui que ocorreria conflitos, porém se resolve com o merge (fazendo uma fusão entre dois ou mais arquivos modificados)
+
+Staged - Preparado
+Os arquivos são enviados para o repositório a partir de commits
+
+---
+Inicializando um repositório Git
+
+Via terminal bash*
+git status - exibe o status do projeto
+git init - inicializa o Git em determinado projeto
+dir - exibe arquivos do diretório
+
+---
+Usando o .gitignore
+
+Deve ser criado o arquivo na pasta main este arquivo exatamente com esse nome
+Arquivos são ignorados para o Git ao inserir o nome do mesmo neste arquivo
+Diretórios são ignorados para o Git ao inserir **Nome_Diretorio neste arquivo.
+O duplo asterisco busca em toda a pasta main.
+Para ignorar arquivos com extensão específica, deve ser ser inserido no seguinte modelo: *.txt
+Todos os arquivos .txt seriam ignorados
+
+---
+Operações básicas
+
+Primeira configuração a realizar em todo repositório (projeto):
+Cada um dos usuários do repositório (do projeto), deve ser identificado, para isso será feito o seguinte.
+No arquivo "config" da pasta .git, podemos inserir as seguintes informações a respeito da identificação do usuário no repositório:
+No terminal bash:
+git config user.name "Nome da pessoa"
+git config user.email "nome@email.com"
+Para configuração global: (Não utilizar em computadores públicos)
+git config --global user.name "Nome"
+
+Adicionando arquivos e pastas no controle de monitoramento do Git:
+git add nome_arquivo
+git add --all = adiciona tudo que não está sendo controlado
+- Ao realizar este procedimento, os arquivos passam do status "Untracked" para "Tracked, ou seja, New file"
+
+Realizando commits - É o envio ou submissão dos arquivos que estão com status "Tracked" para "Staged". Para que os arquivos fiquem prontos para o envio ao branch principal do projeto.
+É também chamado de snapshot.
+git commit -m "Mensagem"
+git commit -a -m "Mensagem" - Realiza commit de todos os arquivos mesmos 
+
+Adicionando novos arquivos:
+git add . = adiciona tudo que não está sendo controlado
+
+Consultando o histórico do projeto:
+Ao realizar um commit, é criado um "hash", é um código, ou um identificador de cada commit.
+git log - Exibe todos os commits.
+É possível realizar busca utilizando: /palavra_chave
+git log -n - Exibe apenas os n últimos logs
+git log --oneline - Apenas os hashs e mensagem
+É possível realizar buscas pela data com diversas possibilidades e autor. (git help log)
+
+Voltando no tempo (quando quiser ir para outros commits):
+git checkout <hash id> - Isso faz com que crie outra cabeça
+git checkout master - Volta para o último commit
