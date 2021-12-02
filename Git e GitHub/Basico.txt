@@ -77,7 +77,7 @@ git add --all = adiciona tudo que não está sendo controlado
 Realizando commits - É o envio ou submissão dos arquivos que estão com status "Tracked" para "Staged". Para que os arquivos fiquem prontos para o envio ao branch principal do projeto.
 É também chamado de snapshot.
 git commit -m "Mensagem"
-git commit -a -m "Mensagem" - Realiza commit de todos os arquivos mesmos 
+git commit -a -m "Mensagem" - Realiza commit de todos os arquivos. 
 
 Adicionando novos arquivos:
 git add . = adiciona tudo que não está sendo controlado
