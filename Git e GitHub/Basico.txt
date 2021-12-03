@@ -100,3 +100,9 @@ git log --oneline - Apenas os hashs e mensagem
 Voltando no tempo (quando quiser ir para outros commits):
 git checkout <hash id> - Isso faz com que crie outra cabeça
 git checkout master - Volta para o último commit
+
+Outros comandos:
+git mv nome_arquivo.* novo_nome.* - Renomear arquivos
+git rm nome_arquivo.* - Excluir arquivo
+git diff <hash id>..<hash id> - Diferença entre dois commits
+git diff --staged - Diferença entre o commit atual e o anterior
