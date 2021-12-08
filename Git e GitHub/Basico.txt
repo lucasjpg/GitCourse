@@ -112,7 +112,9 @@ git branch    - Visualiza branchs
 git branch -a - Visualiza tudo
 git branch --list - Visualiza branchs
 git branch <nome branch> - Cria uma nova branch
-git checkout -b nomeBranch - Cria uma nova branch e muda para ela.
+git checkout -b <nome branch> - Cria uma nova branch e muda para ela.
 git checkout <nome branch> - Muda para a branch.
 git branch -d <nome branch> - Exclui branch, se não foi feito merge não é possível.
 git branch -D <nome branch> - Exclui branch de modo forçado, mesmo se não foi feito merge.
+
+git merge <nome branch>
