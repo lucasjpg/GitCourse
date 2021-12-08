@@ -3,19 +3,9 @@
 ######### Necessario organizar esta primeira secao, sao informacoes aleatorias adquiridas.
 
 GitFlow
-git branch -a (visualiza tudo)
-git status (visualiza modificações)
-git add - leva os arquivos para uma area staged
-git commit -a (add todos os arquivos modificados)
-git commit -m "Mensagem"
-git log -1 (verifica o ultimo log)
-
-git checkout -b nomeBranch
-
-Não é possível trocar de branch sem antes terminar o que está se fazendo.
 
 
-git diff <nome arquivo> (verifica alterações)
+
 git push (leva o diretorio local para diretorio da nuvem)
 git pull (diretorio da nuvem para local)
 
@@ -85,24 +75,44 @@ Realizando commits - É o envio ou submissão dos arquivos que estão com status
 É também chamado de snapshot.
 git commit -m "Mensagem"
 git commit -a -m "Mensagem" - Realiza commit de todos os arquivos. 
+git commit -am "Mensagem" - Add todos os arquivos modificados
+git commit --amend -m "mensagem" - Realiza alterações no último commit.
 
 Adicionando novos arquivos:
 git add . = adiciona tudo que não está sendo controlado
 
 Consultando o histórico do projeto:
 Ao realizar um commit, é criado um "hash", é um código, ou um identificador de cada commit.
+É possível realizar buscas pela data com diversas possibilidades e autor. (git help log)
 git log - Exibe todos os commits.
 É possível realizar busca utilizando: /palavra_chave
 git log -n - Exibe apenas os n últimos logs
 git log --oneline - Apenas os hashs e mensagem
-É possível realizar buscas pela data com diversas possibilidades e autor. (git help log)
+git log -1 (verifica o ultimo log)
 
 Voltando no tempo (quando quiser ir para outros commits):
 git checkout <hash id> - Isso faz com que crie outra cabeça
 git checkout master - Volta para o último commit
+git checkout <arquivo> - Volta arquivo para último commit.
 
 Outros comandos:
 git mv nome_arquivo.* novo_nome.* - Renomear arquivos
 git rm nome_arquivo.* - Excluir arquivo
 git diff <hash id>..<hash id> - Diferença entre dois commits
 git diff --staged - Diferença entre o commit atual e o anterior
+git diff <nome arquivo> (verifica alterações)
+git restore --staged <arquivo> - Remove arquivo de monitoração.
+
+---
+Operações intermediárias
+
+Um branch nada mais é do que uma ramificação do projeto. O ramo principal é a branch master
+Não é possível trocar de branch sem antes terminar o que está se fazendo.
+git branch    - Visualiza branchs
+git branch -a - Visualiza tudo
+git branch --list - Visualiza branchs
+git branch <nome branch> - Cria uma nova branch
+git checkout -b nomeBranch - Cria uma nova branch e muda para ela.
+git checkout <nome branch> - Muda para a branch.
+git branch -d <nome branch> - Exclui branch, se não foi feito merge não é possível.
+git branch -D <nome branch> - Exclui branch de modo forçado, mesmo se não foi feito merge.
