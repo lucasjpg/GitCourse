@@ -1,15 +1,3 @@
-
-
-######### Necessario organizar esta primeira secao, sao informacoes aleatorias adquiridas.
-
-GitFlow
-
-
-
-git push (leva o diretorio local para diretorio da nuvem)
-git pull (diretorio da nuvem para local)
-
-
 ---
 Ciclo de vida - Status de arquivos no Git
 
@@ -33,9 +21,9 @@ Os arquivos são enviados para o repositório a partir de commits
 Inicializando um repositório Git
 
 Via terminal bash*
-git status - exibe o status do projeto
-git init - inicializa o Git em determinado projeto
-dir - exibe arquivos do diretório
+git status - Exibe o status do projeto
+git init - Inicializa o Git em determinado projeto
+git init --bare - Inicializa um repositório Git para trabalho em equipe.
 
 ---
 Usando o .gitignore
@@ -56,6 +44,8 @@ echo 'another_file_to_ignore' >> .gitignore
 
 ---
 Operações básicas
+
+touch <nome arquivo> - Criar um arquivo no terminal.
 
 Primeira configuração a realizar em todo repositório (projeto):
 Cada um dos usuários do repositório (do projeto), deve ser identificado, para isso será feito o seguinte.
@@ -117,4 +107,15 @@ git checkout <nome branch> - Muda para a branch.
 git branch -d <nome branch> - Exclui branch, se não foi feito merge não é possível.
 git branch -D <nome branch> - Exclui branch de modo forçado, mesmo se não foi feito merge.
 
-git merge <nome branch>
+Para realizar merge, a branch a ser fundida no main deve estar com status clean.
+git merge <nome branch> - Realiza commit e faz a fusão da branch informada no branch atual.
+
+Rebase é remontar a base de um branch.
+git rebase <nome branch> - Realiza commit, faz a fusão da branch informada no branch atual e aponta a base para a branch informada no ponto atual do rebase.
+
+git clone - Clona um repositório
+git push - Leva o diretorio local para diretorio da nuvem
+git fetch - Baixa arquivos do repositorio remoto mas não aplica no local, não faz o merge. Permite fazer rebase.
+git pull - Junção do fetch com rebase. Baixa repositório remoto para local e faz o merge.
+
+# Assistir novamente aula 34 - Trabalhando com Tags
